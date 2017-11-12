@@ -1,13 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
-from flask import render_template
+from flask import render_template, Blueprint
 
-from app import app
 from app.tools import utils
 
+bp = Blueprint('diff', __name__)
 
-@app.route('/')
-@app.route('/diff')
+
+@bp.route('/')
+@bp.route('/diff')
 def index():
     ticker = utils.get_diff()
 
