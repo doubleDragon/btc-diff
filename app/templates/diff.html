@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>btc-diff</title>
+
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+<div class="container">
+    <h3>bitfinex差价百分比= (bithumb买一价 - bitfinex卖一价) / bitfinex卖一价 * 100</h3>
+    <h3>bithumb差价百分比= (bitfinex买一价 - bithumb卖一价) / bithumb卖一价 * 100</h3>
+
+    <br>
+    <br>
+
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>bid</th>
+                    <th>ask</th>
+                    <th>diff</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Bitfinex</td>
+                    <td>{{ticker.bfx.bid}}</td>
+                    <td>{{ticker.bfx.ask}}</td>
+                    <td>{{ticker.diff.bfx}}</td>
+                </tr>
+                <tr>
+                    <td>Bithumb</td>
+                    <td>{{ticker.btb.bid}}</td>
+                    <td>{{ticker.btb.ask}}</td>
+                    <td>{{ticker.diff.btb}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
